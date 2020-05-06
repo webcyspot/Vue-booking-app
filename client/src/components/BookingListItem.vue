@@ -1,7 +1,10 @@
 <template lang="html">
   <div class="booking">
-    <p>{{booking.name}}</p>
+    <p class="name">{{booking.name}}</p>
     <p>{{booking.email}}</p>
+    <p>Check-In: {{booking.checkInDate}}</p>
+    <p><span class="nights">Nights: {{booking.nights}}</span>
+       <span class="guests">Guests: {{booking.guests}}</span></p>
     <button v-if="!booking.status"type="button" v-on:click="updateBooking">Check-In</button>
     <button type="button" v-on:click="deleteBooking">Delete</button>
   </div>
@@ -30,10 +33,32 @@ export default {
 
 <style lang="css" scoped>
 .booking{
-  border-style: solid;
-  width: 200px;
+  background-color: #ff206e;
+  border: solid 3px #ff206e;
+  color: white;
+  font-family: 'Montserrat';
+  width: 265px;
   float: left;
+  margin: 5.5px;
+}
+.booking:hover {
+  background-color: white;
+  color: black;
+  border: solid 3px #ff206e;
+}
+.name {
+  font-weight: 900;
+}
+p {
   margin: 5px;
-  background-color: #fff;
+}
+.nights, .guests {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+button {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 </style>
