@@ -2,7 +2,7 @@
   <div class="booking" v-bind:class="checkedIn()">
     <p class="name">{{booking.name}}</p>
     <p>{{booking.email}}</p>
-    <p class="checkIn">Arrival: <span class="arrival">{{booking.checkInDate}}</span></p>
+    <p class="checkIn">Arrival: <span class="arrival">{{dateParse()}}</span></p>
     <p><span class="nights">Nights: <span class="data">{{booking.nights}}</span></span>
        <span class="guests">Guests: <span class="data">{{booking.guests}}</span></span></p>
     <button v-if="!booking.status"type="button" v-on:click="updateBooking">Check-In</button>
@@ -11,8 +11,9 @@
 </template>
 
 <script>
-import {eventBus} from '@/main.js'
-import BookingService from '@/services/BookingService'
+import {eventBus} from '@/main.js';
+import BookingService from '@/services/BookingService';
+import moment from 'moment';
 
 export default {
   name: 'booking-list-item',
@@ -29,6 +30,9 @@ export default {
     },
     checkedIn() {
       return this.booking.status ? "checkedIn" : "booking";
+    },
+    dateParse() {
+      return moment(this.datee).format('DD-MM-YYYY')
     }
   }
 }
