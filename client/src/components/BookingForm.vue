@@ -146,6 +146,10 @@ input:focus {
   margin: 10px;
 }
 
+.save:hover {
+  opacity: 70%;
+}
+
 hr {
   margin-top: 30px;
   background-color: #ff206e;
