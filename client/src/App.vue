@@ -67,28 +67,34 @@ export default {
   color: white;
   width: 100%;
 }
+
 .logo-container {
   width: 10%;
   float: left;
 }
+
 .logo {
   height: 66px;
   margin-top: 10px;
   margin-bottom: 7px;
 }
+
 .title-container {
   width: 80%;
   float: left;
 }
+
 .title {
   font-size: 50px;
 }
+
 </style>
 
 <style>
 body {
   user-select: none;
 }
+
 p {
   padding: 0;
   margin: 0;
