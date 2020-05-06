@@ -42,6 +42,8 @@ export default {
 .list-container {
   display: block;
   text-align: center;
+  margin-bottom: 40px;
+  margin-top: 25px;
 }
 
 .list {

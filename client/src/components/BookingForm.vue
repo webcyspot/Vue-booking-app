@@ -14,7 +14,7 @@
           <label for="email">Email</label>
         </div>
         <div class="col-75">
-          <input type="text" v-model="email" required/>
+          <input type="email" v-model="email" required/>
         </div>
       </div>
       <div class="row">
