@@ -44,6 +44,7 @@
       <input type="hidden" v-model="status" value="false" hidden/>
       <input class="save" type="image" :src="save" value="Save"/>
     </form>
+    <hr>
   </div>
 </template>
 
@@ -138,5 +139,12 @@ input:focus {
   height: 40px;
   float: right;
   margin: 10px;
+}
+
+hr {
+  margin-top: 30px;
+  background-color: #ff206e;
+  border: none;
+  height: 3px;
 }
 </style>
