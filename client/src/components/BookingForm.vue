@@ -42,7 +42,7 @@
         </div>
       </div>
       <input type="hidden" v-model="status" value="false" hidden/>
-      <input class="save" type="image" :src="save" value="Save"/>
+      <input v-tooltip.left="'Add Booking'" class="save" type="image" :src="save" value="Save"/>
     </form>
     <hr>
   </div>
@@ -155,5 +155,9 @@ hr {
   background-color: #ff206e;
   border: none;
   height: 3px;
+}
+
+.tooltip {
+  background-color: black;
 }
 </style>
