@@ -128,13 +128,22 @@ export default {
   clear: both;
 }
 
-input[type=text],[type=number],[type=date]{
+input[type=text],[type=number]{
   width: 90%;
   background-color: transparent;
   font-size: 18px;
   border-radius: 5%;
   border: solid 3px #ff206e;
 }
+
+input[type=date]{
+  width: 90%;
+  background-color: transparent;
+  font-size: 16px;
+  border-radius: 5%;
+  border: solid 3px #ff206e;
+}
+
 
 input:focus {
   outline: none;
