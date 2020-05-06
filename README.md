@@ -76,3 +76,12 @@ npm run server:dev
 - Click the link below to open project in browser
 
 [LocalHost](http://localhost:8080/): http://localhost:8080/
+
+---
+
+# Acknowledgements
+
+Group project built with:
+
+- [Antonio](https://github.com/Mitictonylor)
+- [Francesco](https://github.com/Ciccillo73)
