@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="booking">
+  <div class="booking" v-bind:class="checkedIn()">
     <p class="name">{{booking.name}}</p>
     <p>{{booking.email}}</p>
     <p>Check-In: {{booking.checkInDate}}</p>
@@ -26,6 +26,9 @@ export default {
     deleteBooking() {
       BookingService.deleteBooking(this.booking._id)
       .then(() => eventBus.$emit('booking-deleted', this.booking._id))
+    },
+    checkedIn() {
+      return this.booking.status ? "checkedIn" : "booking";
     }
   }
 }
@@ -40,6 +43,16 @@ export default {
   width: 265px;
   float: left;
   margin: 5.5px;
+}
+.checkedIn{
+  background-color: #ff206e;
+  border: solid 3px #ff206e;
+  color: white;
+  font-family: 'Montserrat';
+  width: 265px;
+  float: left;
+  margin: 5.5px;
+  opacity: 50%;
 }
 .booking:hover {
   background-color: white;
