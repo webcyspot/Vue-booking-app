@@ -58,26 +58,27 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.menu-bar-container {
-  border-style: solid;
+.menu-bar {
   overflow: auto;
   display: block;
   text-align: center;
+  background-color: #ff206e;
+  font-family: 'Pacifico', cursive;
+  color: white;
+  width: 100%;
 }
 .logo-container {
-  width: 15%;
+  width: 10%;
   float: left;
-  border-style: solid;
 }
 .logo {
-  height: 50px;
-  margin-top: 7px;
+  height: 66px;
+  margin-top: 10px;
   margin-bottom: 7px;
 }
 .title-container {
-  width: 75%;
+  width: 80%;
   float: left;
-  border-style: solid;
 }
 .title {
   font-size: 50px;
