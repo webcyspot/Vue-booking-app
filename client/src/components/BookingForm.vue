@@ -129,7 +129,7 @@ export default {
   clear: both;
 }
 
-input[type=text],[type=number]{
+input[type=text],[type=number],[type=email]{
   width: 90%;
   background-color: transparent;
   font-size: 18px;
@@ -144,7 +144,6 @@ input[type=date]{
   border-radius: 5%;
   border: solid 3px #ff206e;
 }
-
 
 input:focus {
   outline: none;
