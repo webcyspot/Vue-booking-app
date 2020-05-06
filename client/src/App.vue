@@ -69,19 +69,21 @@ export default {
 }
 
 .logo-container {
-  width: 10%;
+  width: 7%;
   float: left;
 }
 
 .logo {
-  height: 66px;
-  margin-top: 10px;
+  height: 50px;
+  margin-top: 18px;
   margin-bottom: 7px;
 }
 
 .title-container {
-  width: 80%;
+  width: 85%;
   float: left;
+  margin-bottom: 7px;
+
 }
 
 .title {
