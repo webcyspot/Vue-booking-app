@@ -77,7 +77,12 @@ export default {
         status: this.status
       }
       BookingService.addBooking(newBooking)
-      .then(booking => eventBus.$emit('booking-added', booking))
+      .then(booking => eventBus.$emit('booking-added', booking));
+      this.name = '';
+      this.email = '';
+      this.checkInDate = '';
+      this.nights = '';
+      this.guests = '';
     },
   }
 }
