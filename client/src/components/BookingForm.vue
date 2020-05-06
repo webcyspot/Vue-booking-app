@@ -2,12 +2,24 @@
   <div class="form-container">
     <form class="form" v-on:submit.prevent="addBooking" method="post">
       <div class="name">
-        <label for="name">Name:</label>
+        <label for="name">Name</label>
         <input type="text" v-model="name" required/>
       </div>
       <div class="email">
-        <label for="email">Email:</label>
+        <label for="email">Email</label>
         <input type="text" v-model="email" required/>
+      </div>
+      <div class="checkInDate">
+        <label for="checkInDate">Check-In Date</label>
+        <input type="date" v-model="checkInDate" required/>
+      </div>
+      <div class="nights">
+        <label for="nights">Nights</label>
+        <input type="number" v-model.number="nights" required/>
+      </div>
+      <div class="occupancy">
+        <label for="occupancy">Occupancy</label>
+        <input type="number" v-model.number="occupancy" required/>
       </div>
       <div class="status">
         <input type="hidden" v-model="status" value="false" hidden/>
@@ -74,6 +86,8 @@ input:focus {
   outline: none;
 }
 .save {
-  height: 30px;
+  height: 40px;
+  float: right;
+  margin: 10px;
 }
 </style>
