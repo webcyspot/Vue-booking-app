@@ -2,9 +2,9 @@
   <div class="booking" v-bind:class="checkedIn()">
     <p class="name">{{booking.name}}</p>
     <p>{{booking.email}}</p>
-    <p>Check-In: {{booking.checkInDate}}</p>
-    <p><span class="nights">Nights: {{booking.nights}}</span>
-       <span class="guests">Guests: {{booking.guests}}</span></p>
+    <p class="checkIn">Arrival: <span class="arrival">{{booking.checkInDate}}</span></p>
+    <p><span class="nights">Nights: <span class="data">{{booking.nights}}</span></span>
+       <span class="guests">Guests: <span class="data">{{booking.guests}}</span></span></p>
     <button v-if="!booking.status"type="button" v-on:click="updateBooking">Check-In</button>
     <button type="button" v-on:click="deleteBooking">Delete</button>
   </div>
@@ -35,16 +35,16 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.booking{
-  background-color: #ff206e;
+.booking {
+  background-color: white;
   border: solid 3px #ff206e;
-  color: white;
   font-family: 'Montserrat';
   width: 265px;
   float: left;
   margin: 5.5px;
 }
-.checkedIn{
+
+.checkedIn {
   background-color: #ff206e;
   border: solid 3px #ff206e;
   color: white;
@@ -54,24 +54,48 @@ export default {
   margin: 5.5px;
   opacity: 50%;
 }
+
 .booking:hover {
-  background-color: white;
-  color: black;
+  background-color: #ff206e;
   border: solid 3px #ff206e;
+  color: white;
 }
+
 .name {
   font-weight: 900;
 }
+
 p {
   margin: 5px;
 }
-.nights, .guests {
+
+.nights, .guests, .checkIn {
   margin-right: 10px;
   margin-left: 10px;
+  font-weight: 900;
 }
+
 button {
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-top: 5px;
+  width: 45%;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  border: solid 1px white;
+  background-color: #ff206e;
+  color: white;
+}
+
+button:hover {
+  border: solid 1px white;
+  background-color: white;
+  color: #ff206e;
+}
+.data {
+  font-weight: 400;
+}
+.arrival {
+  font-weight: 400;
+  margin-left: 5px;
 }
 </style>
