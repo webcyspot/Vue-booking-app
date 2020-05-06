@@ -95,11 +95,31 @@ export default {
 <style>
 body {
   user-select: none;
+  overflow-x: hidden;
 }
 
 p {
   padding: 0;
   margin: 0;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;
+}
+
+#footer {
+  position: absolute;
+  width: 97.5%;
+  bottom: 0;
+  height: 3rem;
+  display: block;
+  background-color: #ff206e;
+  padding: 7px 18px;
 }
 
 </style>

@@ -93,6 +93,7 @@ export default {
   display: block;
   text-align:center;
   margin: 30px;
+  margin-top: 35px;
 }
 
 .form {
